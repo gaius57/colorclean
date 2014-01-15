@@ -14,10 +14,10 @@ Possibilités
 - 5 types d'articles (article, audio, vidéo, citation et galerie) avec affichage optimisé
 - Entièrement Responsive : s'adpate a toutes largeurs d'écran
 - Gestion du type portfolio avec espace dédié dans l'administration
-- Footer "Widjet Ready"
+- Footer "Widget Ready"
 - Personnalisation de la couleur et de l'affichage
 - Pages de contact et d'archive dédiés entirèrement paramétrables via l'administration
 - Panneau de configuration dédié accessisble dans l'administration 
 - Utilisation d'Ajax pour les formulaires
-- Gestion des mis à jour avec alertes dans le panneau de configuration
+- Gestion des mis à jours avec alertes dans le panneau de configuration
 - ...
