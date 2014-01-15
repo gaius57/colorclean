@@ -1,0 +1,55 @@
+body {background: #eae1ee;}
+#cc-comment ul {border-left: 7px solid #eae1ee;}
+
+
+/*PRIMARY COLOR*/
+h1,h2,.cc-post-title,
+.cc-archive-post
+{border-color:#aa00ff}
+
+#cc-menu-mobile,
+#cc-nav-mobile a,
+#cc-sitename,
+.cc-searchform,
+#cc-pagination a:hover,
+#cc-menu a,
+.cc-post-content a.more-link,
+.cc-post-quote-cirle,
+#cc-comment-form input#submit,
+#cc-menu-mobile,
+#cc-nav-mobile a,
+#cc-contact-submit,
+.cc-picture-link a[href$=".jpg"]:before,
+.cc-comment-nav .page-numbers:hover
+{background-color:#aa00ff}
+
+.cc-widget h6,
+.cc-post-quote-author,
+.cc-archive-block h2,
+.cc-archive-5-post
+{color: #aa00ff;}
+
+
+
+/*SECONDARY COLOR*/
+.cc-post-meta a:hover,
+.cc-post-txt a:hover, 
+.cc-widget a:hover, 
+#cc-comment-content a:hover, 
+.cc-coord-txt a:hover,
+#cc-comment a.comment-reply-link:hover,
+.cc-archive-block a:hover,
+.cc-portfolio-option a:hover
+{color: #c34efe;}
+
+
+#cc-contact-submit:hover,
+#cc-menu a:hover,
+#cc-menu .current-menu-item a,
+#cc-pagination .page-numbers.current,
+.cc-post-content a.more-link:hover,
+#cc-comment-form input#submit:hover,
+#cc-menu-mobile:hover, #cc-nav-mobile a:hover,
+#cc-nav-mobile .current-menu-item a,
+.cc-comment-nav .page-numbers.current
+{background-color: #c34efe;}

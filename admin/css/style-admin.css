@@ -1,0 +1,351 @@
+/**
+ * The HTML template for displaying Options panel.
+ * 
+ * @package WordPress
+ * @subpackage Color&Clean
+ * @since Color&Clean 1.0
+ */
+
+.cc-color-option{
+    display: table;
+    margin: auto;
+}
+
+.cc-color-option input[type="radio"]:not(:checked),.cc-color-option input[type="radio"]:checked{
+    display:none;
+}
+
+.cc-color-option input[type="radio"]+label
+{
+	display:inline-block;
+	margin:5px 3px;;/* c'est plus aéré avec une marge !*/
+        width:75px;
+        height:75px;
+        opacity: 0.5;
+}
+
+.cc-color-option input[type="radio"]+label:hover,.cc-color-option input[type="radio"]:checked+label /*Bouton hover*/
+{
+        opacity: 1;
+}
+
+.cc-color-option input[type="radio"]+label:before
+{
+        content:"";/* pour que le bouton soit visible*/
+	display:inline-block;
+	width:75px;
+	height:75px;
+}
+
+.cc-color-option input[type="radio"]+label:hover:before /*Bouton hover*/
+{
+	background-image:url('../img/colorhover.png');
+        opacity: 1;
+}
+.cc-color-option input[type="radio"]:checked+label:before/*Bouton coché*/
+{
+	background-image:url('../img/coloron.png');
+        opacity: 1;
+}
+
+
+
+#cc-admin-navmenu{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(240, 240, 240);
+    border-right: 1px solid rgb(216, 216, 216);
+}
+
+#cc-admin-navmenu li a, #cc-admin-navmenu ul li a:link, #cc-admin-navmenu ul li a:visited {
+    display: block;
+    margin: -6px 0;
+    padding: 14px 20px 14px 20px;
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(82, 81, 81);
+    opacity: 0.8;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+#cc-admin-navmenu li a:hover{
+    background: rgb(255, 255, 255);
+    border-right : 1px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+#cc-admin-container {
+    margin: 35px auto;
+    width: 840px;
+    font-family: 'Oswald','HelveticaNeue','Helvetica Neue',Helvetica,Arial,"Lucida Grande",sans-serif;
+    position: relative;
+    z-index: 0;
+   
+}
+
+#cc-admin-container #cc-admin-header {
+    background: #ececec;
+    border: 1px  solid rgb(216, 216, 216);
+    font-size: 50px;
+    text-shadow:2px 2px 0px #FFFFFF;
+    padding: 45px 0 80px 25px;
+}
+
+
+#cc-admin-container #cc-admin-main-menu {
+    background-color: #ececec;
+    border: 1px  solid rgb(216, 216, 216);
+    border-top:none;
+}
+
+#cc-admin-container #cc-admin-navigation {
+    float: left;
+    position: relative;
+    width: 210px;
+    font-style: normal;
+}
+
+#cc-admin-container #cc-admin-content {
+    float: left;
+    width: 600px;
+    min-height: 650px;
+    margin-left: -1px;
+    padding: 0px 14px;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgb(216, 216, 216);
+    box-shadow: 0px 1px 0px rgb(255, 255, 255) inset;
+}
+
+
+div.clear{
+    background: none repeat scroll 0% 0% transparent;
+    border: 0px none;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0px;
+    list-style: none outside none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+
+#cc-admin-container .save_bar {
+    background: none repeat scroll 0% 0% #ececec;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-width: 0px 1px 1px;
+    padding: 20px 15px;
+    height: 38px;
+    text-align: right;
+    box-shadow: 0px 1px 0px rgb(255, 255, 255) inset;
+}
+
+
+#cc-admin-container #cc-admin-navigation ul {
+    margin: 0px;
+}
+
+#cc-admin-container #cc-admin-navigation li {
+    margin-bottom: 0px;
+    box-shadow: 0px 1px 0px rgb(249, 249, 249) inset;
+    margin-right: 1px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+
+#cc-admin-container #cc-admin-navigation li span, #cc-admin-container #cc-admin-navigation ul li a:link, #cc-admin-navigation ul li a:visited {
+    display: block;
+    padding: 14px 10px 14px 25px;
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(82, 81, 81);
+    opacity: 0.8;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#cc-admin-container #cc-admin-navigation span.current{
+    background: white;
+}
+
+#cc-admin-container .group {
+    padding-bottom: 20px;
+    display: none;
+}
+
+#cc-admin-container .group h2 {
+    display: none;
+    border-bottom: 3px solid rgb(231, 231, 231);
+    background: none repeat scroll 0% 0% rgb(51, 51, 51);
+    margin: 16px 0px 0px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 21px;
+    text-shadow: none;
+    border-radius: 2px 2px 2px 2px;
+    font-style: normal;
+}
+
+#cc-admin-container #cc-admin-content .cc-admin-option {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#cc-admin-container #cc-admin-content .cc-admin-option h3.option-title {
+    font-style: normal;
+    font-size: 20px;
+    margin: 25px auto 20px auto;
+    padding: 6px 0px 12px;
+    text-align: center;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    color: rgb(101, 101, 101);
+}
+
+#cc-admin-container #cc-admin-content .cc-admin-option .cc-action {
+    text-align: center;
+}
+
+#cc-admin-container #cc-admin-content .cc-admin-option .explain {
+    text-align: center;
+    font-size: 11px;
+    color: rgb(153, 153, 153);
+}
+
+
+#cc-admin-container .cc-action input, #cc-admin-container .cc-action select, #cc-admin-container .cc-action textarea {
+    margin-bottom: 9px !important;
+    background-color: rgb(241, 241, 241);
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-color: rgb(204, 204, 204) rgb(230, 230, 230) rgb(230, 230, 230) rgb(204, 204, 204);
+    width: 370px;
+    text-align: center;
+    min-height:42px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+#cc-admin-container .cc-action textarea {
+    font-family: 'HelveticaNeue','Helvetica Neue',Helvetica,Arial,"Lucida Grande",sans-serif;
+    width: 100%;
+    text-align: left;
+}
+
+#cc-admin-container .cc-action input:hover, #cc-admin-container .cc-action textarea:hover {
+    background-color: rgb(249, 249, 249);
+}
+
+#cc-admin-container .cc-action input:focus, #cc-admin-container .cc-action textarea:focus {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204) rgb(230, 230, 230) rgb(230, 230, 230) rgb(204, 204, 204);
+    outline: 0px none;
+}
+
+
+
+
+
+
+
+
+
+
+
+#cc-admin-container .option input[type="checkbox"]:not(:checked),#cc-admin-container .option input[type="checkbox"]:checked{
+    display:none;
+}
+
+#cc-admin-container .option input[type="checkbox"]+label
+{
+        margin-top: 15px;
+        content:"";/* pour que le bouton soit visible*/
+	display:inline-block;
+	width:90px;
+	height:37px;
+        border-radius: 5px;
+}
+
+#cc-admin-container .option input[type="checkbox"]:not(:checked)+label /*Bouton hover*/
+{
+	background-image:url('../img/check.png'); 
+        background-position: bottom;
+}
+#cc-admin-container .option input[type="checkbox"]:checked+label/*Bouton coché*/
+{
+	background-image:url('../img/check.png');
+        background-position: top;
+}
+
+.final-submit-admin{
+    display: inline;
+    float: right;
+    margin: -15px 15px -20px 0;
+    text-shadow: none;
+    width: 150px;
+    background-color: #18b518;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+#cc-pic-gallery img{
+    margin: 3px 5px;
+}
+
+#cc_gallery_button{
+    display: block;
+    margin: 15px 0;
+}
+
+#cc_quotes, #cc_gallery, #cc_audio, #cc_video{
+    display: none;
+}
+        
+
+#cc-contact-succes{
+    position: relative;
+    background-color: #18b518;
+    color:white;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'HelveticaNeue','Helvetica Neue',Helvetica,Arial,"Lucida Grande",sans-serif;
+    text-align: center;
+    z-index: 1001;
+    padding: 10px;
+}
+
+#cc-contact-error{
+      position: relative;
+    background-color: #FF0000;
+    color:white;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'HelveticaNeue','Helvetica Neue',Helvetica,Arial,"Lucida Grande",sans-serif;
+    text-align: center;
+    z-index: 1001;
+    padding: 10px;
+}

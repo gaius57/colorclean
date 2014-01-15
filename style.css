@@ -1,0 +1,1225 @@
+/*
+Theme Name: Color&Clean
+Theme URI: #
+Description: This is a responsive design theme and customizable. It allows you to publish your posts, your music, videos, slideshows, quotes ... clearly and precisely, harmonized by the color of your choice. Enjoy it.
+Author: Gaius57
+Author URI: http://jonathan-buyck.fr/
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: colorclean
+*/
+
+/****************************
+******  CSS general *********
+****************************/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s,
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul,
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+strong{
+    font-weight: bold;
+}
+
+i,em{
+    font-style: italic;
+}
+
+body {
+    background: #e3eaed;
+    font-family: 'Open Sans','Droid Sans','HelveticaNeue','Helvetica Neue',Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color	:rgb(70, 72, 73);
+    line-height: 28px;
+    padding-top: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #373839;
+    display: inline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: normal;
+}
+
+h1{
+    font-size: 26px;
+    color: #373839;
+    font-weight: 600;
+    border-left: #1a9fe0 7px solid ;
+    padding-left: 10px;
+}
+
+h2{
+    border-left: #1a9fe0 4px solid ;
+    font-size: 20px;
+    padding-left:7px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h4{
+    color: rgb(119, 119, 119);   
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: rgb(200, 200, 200) solid 1px;
+    width: 100%;
+}
+
+h5{
+    color: rgb(119, 119, 119);   
+    font-weight: 400;
+    font-size: 18px;
+}
+/*
+img{
+    display: inblock;
+}*/
+
+#container{
+    max-width:900px;
+    margin-left:17%;
+    margin-right: 17%;
+    margin-top: 35px;
+}
+
+#cc-top-broke{
+   transform: rotate(10deg);
+   -ms-transform:  rotate(10deg);
+   -moz-transform:  rotate(10deg);
+   -webkit-transform:  rotate(10deg);
+   position: fixed;
+   bottom:150px;
+   margin-left:-13px;
+   width: 100%;
+}
+
+#cc-sitename{
+    float: left;
+    background: #1a9fe0;
+    padding: 13px 20px 17px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px 5px 5px 5px;
+    color:black;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+}
+
+.cc-searchform{
+    background: #1a9fe0;
+    padding: 10px;
+    margin: 0px 5px 0 5px;
+    min-width: 210px;
+    overflow: hidden;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+.cc-searchform input.s{
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    border: rgb(210, 210, 210) 1px solid;
+    padding: 10px;
+    height: 38px;
+    color: rgb(153, 153, 153);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgb(229, 229, 229) url('images/search.png') no-repeat right;
+}
+
+
+
+#cc-pagination{
+    margin-bottom: 60px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+#cc-pagination a{
+    background: white;
+    padding: 8px 16px;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+#cc-pagination a:hover{
+    background: #1a9fe0;
+}
+
+#cc-pagination .page-numbers.current{
+    background: #1880b6;
+    color: white;
+    padding: 8px 16px;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+}
+
+#clear-float{
+    clear: both;
+}
+
+
+
+
+/****************************
+******  CSS Menu *********
+****************************/
+
+#cc-menu{
+    float: right;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 5px 0px 0px;
+}
+
+#cc-menu-mobile{
+    float: right;
+    width:45px;
+    height:  45px;
+    margin: 0px 5px 0px 5px;
+    background:#1a9fe0 url('images/mobile.png') bottom no-repeat;
+    display: none;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+}
+
+#cc-nav-mobile{
+    display: none;
+    width:100%;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#cc-menu-mobile:hover{
+    background-color: #1880b6;
+    cursor: pointer;
+}
+
+#cc-menu li{
+    list-style-type: none;
+    float: left;
+}
+
+#cc-nav-mobile li{
+    list-style-type: none;
+    width: 100%
+}
+
+#cc-menu a{
+    margin: 0px 0px 5px 5px;
+    background: #1a9fe0;
+    padding: 15px;
+    list-style-type: none;
+    display: inline-block;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+#cc-nav-mobile a{
+    text-align: center;
+    display :block;
+    background: #1a9fe0;
+    padding: 10px;
+    margin: 0 5px 5px 5px ;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+#cc-menu a:hover,#cc-nav-mobile a:hover{
+    background: #1880b6;
+}
+
+#cc-menu .current-menu-item a, #cc-nav-mobile .current-menu-item a{
+    background: #1880b6;
+    color: white;
+}
+
+
+/****************************
+******  CSS of posts ********
+****************************/
+
+.cc-post{
+    background:rgb(255, 255, 255);
+    width: auto;
+    max-width: 900px;
+    margin: 0px auto 80px auto;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+}
+
+.cc-post-txt a, .cc-widget a ,#cc-comment-content a, .cc-coord-txt a{
+    font-style: italic;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+.cc-post-txt a:hover, .cc-widget a:hover, #cc-comment-content a:hover, .cc-coord-txt a:hover{
+    color: #1880b6;
+}
+
+
+
+.cc-post-content{
+    padding: 50px 50px 20px 50px;
+}
+
+.cc-portfolio-date {
+  float:right;
+  font-weight: 600;
+  color:#d5d5d5;
+  margin-right: 15px;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.cc-post-title{
+    font-size: 26px;
+    color: #373839;
+    font-weight: 600;
+    border-left: #1a9fe0 7px solid ;
+    padding-left: 10px;
+    margin-bottom: 35px;
+    min-height: 35px;
+}
+
+.cc-post-title:hover a{
+    color: black;
+}
+
+.cc-post-content a.more-link{
+    background-color: #1a9fe0;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    font-style: normal;
+    padding: 10px;
+    margin-top: 50px;
+    float: right;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+.cc-post-content a.more-link:hover{
+    background-color: #1880b6;
+    padding: 10px;
+    margin-top: 50px;
+    float: right;
+    color: white;
+}
+
+.cc-post-meta{
+    margin-top:20px;
+    font-weight: 600;
+    color:#d5d5d5;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+.cc-post-meta a{
+    color:#d5d5d5;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+.cc-post-meta a:hover{
+    color:#1880b6;
+}
+
+.cc-post-meta-element{
+    float: left;
+    margin-right: 30px;
+}
+
+.cc-post-quote{
+    max-width: 80%;
+    margin: 35px auto 70px auto;
+    font-family: Georgia, Arial, Helvetica, Sans-serif;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.cc-post-quote-cirle{
+    margin:0 auto 25px auto;
+    width: 100px;
+    height: 100px;
+    border-radius:75px;
+    background: #1a9fe0 url('images/quote.png') center;
+}
+
+.cc-post-quote-author{
+    margin-top: 18px;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Oswald','Open Sans','HelveticaNeue','Helvetica Neue',Helvetica,Arial,"Lucida Grande",sans-serif; ;
+    font-style: normal;
+    color: #1a9fe0;
+}
+
+.cc-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.cc-video-container iframe,
+.cc-video-container object,
+.cc-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cc-place-container {
+    position: relative;
+    padding-bottom: 35%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.cc-place-container iframe,
+.cc-place-container object,
+.cc-place-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.cc-post-author{
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid rgb(210, 210, 210);
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.cc-post-author-gravatar{
+    margin: 6px 0;
+    float: left;
+}
+
+.cc-post-author-txt{
+    margin-left: 110px;
+}
+
+.cc-post-tags{
+    margin-top:20px;
+    color: rgb(128,128,128);
+}
+
+.cc-post-tags a{
+    font-style: italic;
+    color: rgb(128,128,128);
+}
+
+.cc-post-tags a:hover{
+    text-decoration: underline;
+}
+
+.cc-post-tags-pic{
+    background: url('images/tags.png') center no-repeat;
+    padding-top: 7px;
+    height: 22px;
+    width: 22px;
+    float: left;
+}
+
+.cc-post-tags-txt{
+    padding-left: 25px;
+}
+
+#cc-previous-next{
+    font-size: 18px;
+    width: 100%;
+    margin-top:40px;
+}
+
+#cc-previous-next a{
+    color: rgb(119,119,119);
+    text-decoration: underline;
+}
+
+#cc-previous-next a:hover{
+    text-decoration: none;
+}
+
+#cc-previous-post{
+    float: left;
+    max-width: 40%;
+}
+
+#cc-next-post{
+    float: right;
+    max-width: 40%;
+    text-align: right;
+}
+
+/****************************
+******  CSS of comments *****
+****************************/
+
+
+#cc-comment{
+    margin-top:40px;
+    max-width: 100%;
+    width:auto;
+}
+
+#cc-comment-title, #reply-title{
+    color: #373839;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#cc-comment a.comment-reply-link{
+    font-size: 14px;
+    font-weight: bold;
+    color:rgb(190,190,190);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+#cc-comment a.comment-reply-link:hover{
+    color:#1880b6;
+}
+
+#cc-comment li{
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+
+#cc-comment ul{
+    border-left: #e3eaed 7px solid;
+    margin: 0 0 30px 40px;
+    padding-left: 10px;
+}
+
+
+#cc-comment ul li{
+    border:none;
+    margin-bottom: 10px;
+}
+
+#cc-comment-avatar{
+    float: left;
+    width: auto;
+    height: auto;
+}
+
+#cc-comment-avatar img{
+    padding: 0;
+    margin:8px 8px 0px 0px;
+    width:36px;
+    height:36px;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+}
+
+#cc-comment-txt{
+    margin:0px 0px 10px 41px;
+}
+
+#cc-comment-author{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: -5px;
+}
+
+#cc-comment-meta{
+    font-size: 14px;
+    color: rgb(119, 119, 119);
+}
+
+#cc-comment-meta a{
+    color: rgb(119, 119, 119);
+}
+
+#cc-comment-meta a:hover{
+    color: rgb(90, 90, 90);
+    text-decoration: underline;
+}
+
+#cc-comment-form{
+    width: auto;
+    max-width: 100%;
+}
+
+#cc-comment-form label,.cc-contact-form label{
+    display: block;
+    text-transform: uppercase;
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#cc-comment-form input#submit{
+    cursor: pointer;
+    border: none;
+    width: auto;
+    max-width: 100%;
+    background-color: #1a9fe0;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 15px;
+    float: right;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+#cc-comment-form input#submit:hover{
+    background-color: #1880b6;
+}
+
+#cc-comment-form input,#cc-comment-form textarea,.cc-contact-form input,.cc-contact-form textarea {
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    border: rgb(210, 210, 210) 1px solid;
+    margin: 0px;
+    padding: 13px;
+    background:rgb(229, 229, 229);
+    color: rgb(153, 153, 153);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+#cc-comment-form input:focus,#cc-comment-form textarea:focus, .cc-contact-form input:focus,.cc-contact-form textarea:focus {
+    background:rgb(242,242,242);
+}
+
+.cc-comment-nav{
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+
+.cc-comment-nav .page-numbers{
+    background: white;
+    padding: 8px 16px;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+} 
+
+.cc-comment-nav .page-numbers:hover{
+    background-color: #1a9fe0;
+} 
+
+.cc-comment-nav .page-numbers.current{
+    background: #1880b6;
+    color: white;
+    padding: 8px 16px;
+} 
+
+
+
+/****************************
+******  CSS of footer *****
+****************************/
+
+.cc-footer{
+    margin: 30px auto;
+    display: table;
+    max-width: 800px;
+}
+
+.cc-footer-widget{
+    display:inline-block; 
+    vertical-align:top;
+    padding: 30px 50px;
+    max-width: 50%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/****************************
+******  CSS of widget *****
+****************************/
+
+.cc-widget {
+    padding: 0;
+    margin:0;
+}
+
+.cc-widget h6{
+    color:#1a9fe0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cc-widget li{
+    list-style: none;
+}
+
+#cc-tweets{
+    margin-bottom: 20px;
+}
+
+#wp-calendar td {
+    padding:  0px 3px;
+}
+
+/****************************
+******  Archives Page *******
+****************************/
+
+.cc-archive-block{
+    width:90%;
+    margin: 40px auto;
+}
+
+.cc-archive-block h2{
+    font-size: 18px;
+    color: #1a9fe0;
+    font-weight: bold;
+}
+
+.cc-archive-5-post{
+    font-size: 18px;
+    color: #1a9fe0;
+    font-weight: bold;
+    margin-left:5%; 
+    margin-bottom: -10px;
+}
+
+.cc-archive-block a:hover{
+    color: #1880b6;
+    text-decoration: underline;
+}
+
+.cc-archive-block li{
+    padding: 0;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.cc-archive-list-left{
+    float:left;
+    width: auto;
+    max-width: 33%;
+}
+
+.cc-archive-list-right{
+    float:right;
+    width: auto;
+    max-width: 33%;
+}
+
+.cc-archive-list-center{
+    margin:0 auto;
+    width: auto;
+}
+
+.cc-archive-monthly{
+    display: table;
+    float: left;
+    word-break: break-all;
+}
+
+.cc-archive-yearly{
+    display: table;
+    margin: auto;
+    max-width: 33%;
+    word-break: break-all;
+}
+
+.cc-archive-category{
+    display: table;
+    float: right;
+    word-break: break-all;
+}
+
+
+.cc-archive-post{
+    clear: both;
+    margin: 30px 0px;
+    border-left: #1a9fe0 7px solid ;
+    padding-left: 10px;
+}
+
+.cc-archive-thumbnail img{
+    padding: 10px 7px 0px 0px;
+    margin: 0;
+}
+
+.cc-archive-thumbnail{
+    float: left;
+}
+
+.cc-archive-title{
+    width: 100%;
+    font-size: 18px;
+    color:#999999;
+    font-weight: bold;
+}
+
+.cc-archive-meta{
+    font-size: 14px;
+    color: rgb(119, 119, 119);
+}
+
+/****************************
+******  CSS of Contact ******
+****************************/
+
+#cc-bloc-contact{
+    margin: 25px 0;
+}
+
+.cc-contact-columns-l{
+    max-width: 40%;
+    float: left;
+    padding: 15px 0 15px 15px ;
+}
+
+.cc-contact-columns-r{
+    width: 50%;
+    float: right;
+    padding: 0 0 0 25px ;
+    margin: 15px 0 15px 0;
+    border-left: 1px rgb(200,200,200) solid;
+}
+
+.cc-coord-element{
+    clear: both;
+    margin: 10px 0;
+}
+
+.cc-coord-txt{
+    margin-left: 30px;
+}
+
+#cc-contact-address{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url('images/address.png') no-repeat center;
+    padding: 5px;
+    padding-left: 0;
+}
+
+#cc-contact-phone{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url('images/phone.png') no-repeat center;
+    padding: 5px; 
+    padding-left: 0;
+}
+
+#cc-contact-mail{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url('images/mail.png') no-repeat center;
+    padding: 5px; 
+    padding-left: 0;
+}
+
+#cc-contact-url{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url('images/url.png') no-repeat center;
+    padding: 5px; 
+    padding-left: 0;
+}
+
+
+#cc-contact-submit{
+    border: none;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    background-color: #1a9fe0;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+    float: right;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+#cc-contact-submit:hover{
+    background: #1880b6;
+}
+
+#cc-contact-social {
+    margin: 5px 0;
+    width: 30%;
+    min-width: 100px;
+    text-align: center;
+    float: left;
+}
+
+#cc-contact-social:hover{
+    -moz-transform: scale(1.05) ;
+    -webkit-transform: scale(1.05) ;
+    -o-transform: scale(1.05) ;
+    -ms-transform: scale(1.05) ;
+    transform: scale(1.05); 
+}
+
+#cc-contact-succes{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top:0;
+    background-color: #18b518;
+    color:white;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1001
+}
+
+#cc-contact-error{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top:0;
+    background-color: #FF0000;
+    color:white;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1001
+}
+
+
+/****************************
+******  CSS of Portfolio ****
+****************************/
+
+
+.cc-portfolio{
+    background:rgb(255, 255, 255);
+    width: auto;
+    max-width: 900px;
+    margin: 0 0 80px 0;
+    -moz-box-shadow: 3px 3px 5px -5px #656565;
+    -webkit-box-shadow: 3px 3px 5px -5px #656565;
+    -o-box-shadow: 3px 3px 5px -5px #656565;
+    box-shadow: 3px 3px 5px -5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=5);
+    padding: 0;
+}
+
+
+.cc-portfolio-txt{
+   padding: 50px 35px;
+}
+
+.cc-portfolio-thumbnail img{
+   max-width: 100%;
+}
+
+.cc-portfolio-meta {
+  float:left;
+  font-size: 14px;
+  color: rgb(119, 119, 119);
+  margin: 10px 0 20px 20px;
+}
+
+.cc-portfolio-meta a{
+  font-size: 14px;
+  color: rgb(119, 119, 119);
+}
+
+.cc-portfolio-meta a:hover{
+  text-decoration: underline;
+}
+
+.cc-portfolio-more {
+  float:right;
+  margin: 15px 30px;
+  cursor: pointer;
+}
+
+.cc-portfolio-more:hover, .cc-portfolio-more h3:hover{
+  color:#1a9fe0;
+}
+
+.cc-portfolio-option{
+    margin-top:-25px;
+    font-weight: 600;
+    color:#d5d5d5;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+.cc-portfolio-option a{
+    color:#d5d5d5;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}
+
+.cc-portfolio-option a:hover{
+    color:#1880b6;
+    text-decoration: none;
+}
+
+.cc-portfolio-option-element{
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+/****************************
+******  Pictures placement **
+****************************/
+
+/* Images */
+.alignleft {
+	float: left;
+        margin: 10px 10px 0px 0px;
+}
+.alignright {
+	float: right;
+        margin: 10px 0px 0px 10px;
+}
+.aligncenter {
+	display: block;
+        margin: 10px auto;
+}
+
+img{
+    margin-bottom: -6px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.cc-post-txt a img {
+        transition: all 0.25s ease-in-out 0s;
+        -o-transition: all 0.25s ease-in-out 0s;
+        -webkit-transition: all 0.25s ease-in-out 0s;
+        -moz-transition: all 0.25s ease-in-out 0s;
+        max-width: 100%;
+        height: auto;
+}
+
+.cc-post-txt a:hover img {
+	opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+/*.cc-post .alignleft,.cc-post img.alignleft, .cc-portfolio .alignleft,.cc-portfolio img.alignleft {
+    display: inline;
+    float: left;
+    max-width: 100%;
+    height: auto;
+}
+.cc-post .alignright,.cc-post img.alignright, .cc-portfolio .alignright,.cc-portfolio img.alignright {
+    display: inline;
+    float: right;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.cc-post .cc-picture-link.alignleft,.cc-portfolio .cc-picture-link.alignleft{
+    margin: 12px 12px 12px 0px;
+}
+
+.cc-post .cc-picture-link.alignright, .cc-portfolio .cc-picture-link.alignright{
+    margin: 12px 0px 12px 12px;
+}
+
+.cc-picture-link a[href$=".jpg"]:before {
+    content: "";
+    left: 0;
+    top:0;
+    background-image:url('images/zoom.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1a9fe0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -moz-transition: all 0.25s ease-in-out 0s;
+}*/
+
+.cc-picture-link a[href$=".jpg"]:hover:before {
+    opacity: 0.5;
+}
+
+
+
+/****************************
+******  Mobiles Devices *****
+****************************/
+@media (min-width: 0px) and (max-width: 640px)  {
+    .cc-footer-widget{padding: 30px 30px;  max-width: 100%; margin: auto; }
+    #container{ margin:35px 2% 0 2%; }
+    #cc-sitename{font-size: 20px;font-weight: 700; margin: 0px 5px 5px 5px; float:none;overflow: hidden;text-align: center; padding: 7px 20px 10px 20px;}
+    #cc-menu{display: none;}
+    #cc-menu-mobile{display:block ;}
+    .cc-searchform{padding: 8px;min-width: 0px;}
+    .cc-searchform input#s{height:35px;padding:7px;}
+    .cc-post-content{ padding: 40px 20px 10px 20px; }
+    .cc-archive-block{ width: 100%; }
+    .cc-portfolio-txt {padding: 35px 20px;}
+    .cc-contact-columns-l{width: 100%; max-width: none;}
+    .cc-contact-columns-r{width: 100%; border-right: none}
+    #cc-comment ul{margin: 0 0 30px 0px;padding-left: 5px;}
+    #cc-next-post{min-width: 100%;margin-top: 20px;}
+    #cc-previous-post{min-width: 100%;}
+    
+}
+
+@media (min-width: 641px){
+    #cc-nav-mobile,#cc-nav-mobile a {display:none ;}
+}
+
+
